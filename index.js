@@ -1,4 +1,5 @@
-/*# create index.js and paste the following
+/* 
+# create index.js and paste the following
 # creates a server object in a variable named server
 # takes in a request and response function
 # outputs a response to the browser
