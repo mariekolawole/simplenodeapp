@@ -3,22 +3,23 @@ on:
   push: 
     paths:
       - '**.js'
-jobs: 
+jobs:
   build:
+    name: my job
     runs-on: ${{matrix.os}}
-   strategy:
+    strategy:
      matrix:
        os: [macos-laatest, windows-latest, ubuntu-lastest]
        node: [10,12,14]
        exclude:
          - os: macos-lastes
            node: 10
-   steps:
+    steps:
      - uses: actions/checkout@v2
      - name: Use node.js ${{matirx.node}}
        uses: actions/setup-node@v1
        with:
          node-version: ${{matrix.node}}
      -  run: npm ci
-     - mpm run buils --if-present
+     -  run: npm run buils --if-present
     
